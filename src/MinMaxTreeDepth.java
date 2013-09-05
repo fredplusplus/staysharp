@@ -1,10 +1,7 @@
-/**
- * http://leetcode.com/onlinejudge#question_111
- * 
- * @author fanzhang
- * 
- */
 public class MinMaxTreeDepth {
+	/**
+	 * http://leetcode.com/onlinejudge#question_111
+	 */
 	public int minDepth(TreeNode root) {
 		if (root == null) {
 			return 0;
@@ -20,5 +17,21 @@ public class MinMaxTreeDepth {
 		} else {
 			return 1 + leftDepth;
 		}
+	}
+
+	/**
+	 * http://leetcode.com/onlinejudge#question_104
+	 * 
+	 */
+	public int maxDepth(TreeNode root) {
+		// Start typing your Java solution below
+		// DO NOT write main() function
+		if (root == null) {
+			return 0;
+		}
+		if (root.left == null && root.right == null) {
+			return 1;
+		}
+		return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
 	}
 }
