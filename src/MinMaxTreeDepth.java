@@ -4,7 +4,7 @@
  * @author fanzhang
  * 
  */
-public class MinDepth {
+public class MinMaxTreeDepth {
 	public int minDepth(TreeNode root) {
 		if (root == null) {
 			return 0;
