@@ -16,7 +16,8 @@ public class SymmetricTree {
 		if (left == null && right == null) {
 			return true;
 		} else if (left != null && right != null) {
-			return left.val == right.val && isSymmetricToEachOther(left.left, right.right)
+			return left.val == right.val 
+					&& isSymmetricToEachOther(left.left, right.right)
 					&& isSymmetricToEachOther(left.right, right.left);
 		} else {
 			return false;
