@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
-/**
- * http://leetcode.com/onlinejudge#question_118
- * 
- */
 public class PascalTriangle {
+	/**
+	 * http://leetcode.com/onlinejudge#question_118
+	 * 
+	 */
 	public ArrayList<ArrayList<Integer>> generate(int numRows) {
 		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
 		if (numRows == 0) {
@@ -22,6 +22,29 @@ public class PascalTriangle {
 				result.add(rowResult);
 			}
 			return result;
+		}
+	}
+
+	/**
+	 * http://leetcode.com/onlinejudge#question_119
+	 */
+	public ArrayList<Integer> getRow(int rowIndex) {
+		ArrayList<Integer> currentRow = new ArrayList<Integer>();
+		currentRow.add(1);
+		ArrayList<Integer> previousRow = currentRow;
+		if (rowIndex == 0) {
+			return currentRow;
+		} else {
+			for (int row = 1; row <= rowIndex; row++) {
+				currentRow = new ArrayList<Integer>();
+				currentRow.add(1);
+				for (int col = 0; col < previousRow.size() - 1; col++) {
+					currentRow.add(previousRow.get(col) + previousRow.get(col + 1));
+				}
+				currentRow.add(1);
+				previousRow = currentRow;
+			}
+			return currentRow;
 		}
 	}
 }
