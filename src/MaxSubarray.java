@@ -8,7 +8,7 @@ public class MaxSubarray {
 		int maxSofar = 0;
 		int maxEndingHere = 0;
 		boolean allNegative = true;
-		int max = 0;
+		int max = Integer.MIN_VALUE;
 		for (int element : A) {
 			if (element > max) {
 				max = element;
