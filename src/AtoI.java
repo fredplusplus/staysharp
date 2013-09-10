@@ -48,12 +48,14 @@ public class AtoI {
 				}
 			}
 			if (outOfRange) {
-				return Integer.MAX_VALUE;
+				if (sign > 0)
+					return Integer.MAX_VALUE;
+				else
+					return Integer.MIN_VALUE;
 			} else {
-				return value;
+				return sign * value;
 			}
 		}
-
 	}
 
 	private boolean isDigit(char c) {
