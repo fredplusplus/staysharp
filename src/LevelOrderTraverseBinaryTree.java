@@ -38,13 +38,28 @@ public class LevelOrderTraverseBinaryTree {
 		return results;
 	}
 
-	public static void main(String[] args) {
-		LevelOrderTraverseBinaryTree l = new LevelOrderTraverseBinaryTree();
-		TreeNode root = new TreeNode(1);
-		root.left = new TreeNode(2);
-		root.right = new TreeNode(3);
-		root.left.left = new TreeNode(4);
-		root.right.right = new TreeNode(5);
-		l.levelOrder(root);
+	/**
+	 * http://leetcode.com/onlinejudge#question_107
+	 */
+	public ArrayList<ArrayList<Integer>> levelOrderBottom(TreeNode root) {
+		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+		traverseBottom(result, root, 0);
+		return result;
+	}
+
+	private void traverseBottom(ArrayList<ArrayList<Integer>> result, TreeNode root, int level) {
+		if (root == null) {
+			return;
+		} else {
+			int size = result.size();
+			if (level == size) {
+				result.add(0, new ArrayList<Integer>());
+				result.get(0).add(root.val);
+			} else {
+				result.get(size - level - 1).add(root.val);
+			}
+			traverseBottom(result, root.left, level + 1);
+			traverseBottom(result, root.right, level + 1);
+		}
 	}
 }
