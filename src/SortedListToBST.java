@@ -5,7 +5,10 @@
  * 
  */
 public class SortedListToBST {
+	private ListNode head;
+
 	public TreeNode sortedListToBST(ListNode head) {
+		this.head = head;
 		// Start typing your Java solution below
 		// DO NOT write main() function
 		int length = 0;
@@ -17,20 +20,29 @@ public class SortedListToBST {
 		if (length == 0) {
 			return null;
 		}
-		return buildBST(head, 0, length - 1);
+		return buildBST(0, length - 1);
 	}
 
-	private TreeNode buildBST(ListNode head, int start, int end) {
+	private TreeNode buildBST(int start, int end) {
 		if (start > end) {
 			return null;
 		}
 		int mid = start + (end - start) / 2;
-		TreeNode left = buildBST(head, start, mid - 1);
+		TreeNode left = buildBST(start, mid - 1);
 		TreeNode root = new TreeNode(head.val);
 		head = head.next;
-		TreeNode right = buildBST(head, mid + 1, end);
+		TreeNode right = buildBST(mid + 1, end);
 		root.left = left;
 		root.right = right;
 		return root;
+	}
+
+	public static void main(String[] args) {
+		SortedListToBST b = new SortedListToBST();
+		ListNode head = new ListNode(3);
+		head.next = new ListNode(5);
+		head.next.next = new ListNode(8);
+		System.out.println(b.sortedListToBST(head));
+
 	}
 }
