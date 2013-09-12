@@ -25,10 +25,4 @@ public class DivideTwoNumers {
 		}
 		return (dividend ^ divisor) >> 31 != 0 ? -ret : ret;
 	}
-
-	public static void main(String[] args) {
-		DivideTwoNumers dtn = new DivideTwoNumers();
-
-		System.out.println(dtn.divide(Integer.MIN_VALUE, Integer.MIN_VALUE));
-	}
 }
