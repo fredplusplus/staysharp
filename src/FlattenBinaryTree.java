@@ -25,10 +25,14 @@ public class FlattenBinaryTree {
 		}
 		TreeNode leftTail = traverse(left);
 		TreeNode rightTail = traverse(right);
-		
+
 		if (leftTail != null) {
 			leftTail.right = right;
 		}
-		return rightTail;
+		if (rightTail != null) {
+			return rightTail;
+		} else {
+			return leftTail;
+		}
 	}
 }
