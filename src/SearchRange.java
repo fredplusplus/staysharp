@@ -37,9 +37,4 @@ public class SearchRange {
 
 		return range;
 	}
-
-	public static void main(String[] args) {
-		SearchRange sr = new SearchRange();
-		sr.searchRange(new int[] { 2, 2 }, 3);
-	}
 }
