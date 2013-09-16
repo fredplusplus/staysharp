@@ -40,9 +40,4 @@ public class GroupOfAnagram {
 		}
 		return sb.toString();
 	}
-
-	public static void main(String[] args) {
-		GroupOfAnagram goa = new GroupOfAnagram();
-		System.out.println(goa.anagrams(new String[] { "bob", "boo" }));
-	}
 }

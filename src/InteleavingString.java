@@ -14,6 +14,11 @@ public class InteleavingString {
 		if (len1 + len2 != len3) {
 			return false;
 		}
+		if (len1 ==0) {
+		    return s3.equals(s2);
+		} else if (len2 ==0) {
+		    return s3.equals(s1);
+		}
 		boolean[][] result = new boolean[len1][len2];
 		// all strings empty case
 		result[0][0] = true;
@@ -50,10 +55,9 @@ public class InteleavingString {
 		}
 		return result[len1-1][len2-1];
 	}
-
+	
 	public static void main(String[] args) {
 		InteleavingString is = new InteleavingString();
-
-		System.out.println(is.isInterleave("a", "", "c"));
+		System.out.println(is.isInterleave("aa", "ab", "aaba"));
 	}
 }

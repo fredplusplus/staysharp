@@ -31,10 +31,4 @@ public class IntToRoman {
 		}
 		return roman;
 	}
-
-	public static void main(String[] args) {
-		IntToRoman itr = new IntToRoman();
-
-		System.out.println(itr.intToRoman(61));
-	}
 }
