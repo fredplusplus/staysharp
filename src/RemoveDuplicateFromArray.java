@@ -4,7 +4,7 @@ public class RemoveDuplicateFromArray {
 	 * 
 	 * 
 	 */
-	public int removeDuplicates(int[] A) {
+	public int removeDuplicates1(int[] A) {
 		if (A == null) {
 			return 0;
 		} else {
@@ -21,5 +21,29 @@ public class RemoveDuplicateFromArray {
 
 			return count;
 		}
+	}
+
+	/**
+	 * http://leetcode.com/oldoj#question_80
+	 */
+	public int removeDuplicates(int[] A) {
+		if (A.length < 3) {
+			return A.length;
+		}
+
+		int i = 1;
+		int j = 1;
+		int count = 1;
+		for (j = 1; j < A.length; j++) {
+			if (A[j - 1] == A[j]) {
+				count++;
+			} else {
+				count = 1;
+			}
+			if (count <= 2) {
+				A[i++] = A[j];
+			}
+		}
+		return i;
 	}
 }
