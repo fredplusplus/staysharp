@@ -31,14 +31,4 @@ public class BuildTreeFromInorderPreorder {
 		node.right = right;
 		return node;
 	}
-
-	public static void main(String[] args) {
-		int[] pre = new int[] { 3, 1, 2, 4 };
-		int[] ino = new int[] { 1, 2, 3, 4 };
-		BuildTreeFromInorderPreorder bp = new BuildTreeFromInorderPreorder();
-
-		TreeNode root = bp.buildTree(pre, ino);
-		System.out.println(root);
-	}
-
 }

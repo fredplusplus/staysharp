@@ -30,10 +30,4 @@ public class BuildTreeFromPostInorder {
 		node.right = right;
 		return node;
 	}
-
-	public static void main(String[] args) {
-		BuildTreeFromPostInorder bp = new BuildTreeFromPostInorder();
-		TreeNode root = bp.buildTree(new int[] { 2, 1, 3 }, new int[] { 2, 3, 1 });
-		System.out.println(root);
-	}
 }
