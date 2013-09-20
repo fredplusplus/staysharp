@@ -44,9 +44,48 @@ public class SpiralPrint {
 		return result;
 	}
 
+	private int num = 0;
+
+	/**
+	 * http://leetcode.com/oldoj#question_59
+	 * 
+	 */
+	public int[][] generateMatrix(int n) {
+		num = 0;
+		int[][] matrix = new int[n][n];
+		generate(matrix, 0, 0, n - 1, n - 1);
+		return matrix;
+	}
+
+	private void generate(int[][] matrix, int top, int left, int bottom, int right) {
+		// base case check
+		if (top > bottom) {
+			return;
+		}
+		// top
+		for (int i = left; i <= right; i++) {
+			matrix[top][i] = ++num;
+		}
+		// right side
+		for (int i = top + 1; i <= bottom; i++) {
+			matrix[i][right] = ++num;
+		}
+		// bottom
+		for (int i = right - 1; i >= left; i--) {
+			matrix[bottom][i] = ++num;
+		}
+		// left side
+		for (int i = bottom - 1; i > top; i--) {
+			matrix[i][left] = ++num;
+		}
+		// recursion
+		generate(matrix, top + 1, left + 1, bottom - 1, right - 1);
+	}
+
 	public static void main(String[] args) {
 		int[][] matrix = new int[][] { { 1, 2, 3, }, { 4, 5, 6 }, { 7, 8, 9 } };
 		SpiralPrint sp = new SpiralPrint();
-		System.out.println(sp.spiralOrder(matrix));
+		int[][] mat = sp.generateMatrix(2);
+		System.out.println(mat);
 	}
 }
