@@ -15,7 +15,7 @@ public class EditDistance {
 				result[0][i] = result[0][i - 1] + 1;
 			}
 			for (int i = 1; i <= str1.length; i++) {
-				result[i][0] = result[i - 1][0]+1;
+				result[i][0] = result[i - 1][0] + 1;
 			}
 			for (int i = 1; i <= str1.length; i++) {
 				for (int j = 1; j <= str2.length; j++) {
@@ -25,11 +25,5 @@ public class EditDistance {
 			}
 			return result[str1.length][str2.length];
 		}
-	}
-
-	public static void main(String[] args) {
-		EditDistance dis = new EditDistance();
-
-		System.out.println(dis.minDistance("ab", "bc"));
 	}
 }
