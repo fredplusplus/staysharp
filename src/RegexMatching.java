@@ -1,6 +1,7 @@
 public class RegexMatching {
 	/**
 	 * http://leetcode.com/oldoj#question_10
+	 * http://leetcode.com/oldoj#question_44
 	 */
 	public boolean isMatch(String s, String p) {
 		return match(s.toCharArray(), p.toCharArray(), 0, 0);
@@ -16,10 +17,10 @@ public class RegexMatching {
 				if (sIndex != s.length - 1) {
 					return false;
 				}
-				return (s[sIndex] == p[pIndex] || (p[pIndex] == '.' && sIndex != s.length))
+				return (s[sIndex] == p[pIndex] || (p[pIndex] == '?' && sIndex != s.length))
 						&& match(s, p, sIndex + 1, pIndex + 1);
 			} else {
-				while (sIndex < s.length && (s[sIndex] == p[pIndex] || (p[pIndex] == '.' && sIndex != s.length))) {
+				while (sIndex < s.length && (s[sIndex] == p[pIndex] || (p[pIndex] == '?' && sIndex != s.length))) {
 					if (match(s, p, sIndex, pIndex + 2)) {
 						return true;
 					}
