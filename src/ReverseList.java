@@ -23,4 +23,36 @@ public class ReverseList {
 		return meta.next;
 	}
 
+	public ListNode reverseIterative(ListNode head) {
+		if (head == null || head.next == null) {
+			return head;
+		} else {
+			ListNode newHead = null;
+			while (head != null) {
+				ListNode node = head;
+				head = head.next;
+				node.next = newHead;
+				newHead = node;
+			}
+			return newHead;
+		}
+	}
+
+	public static void main(String[] ags) {
+		ReverseList rl = new ReverseList();
+		ListNode head = new ListNode(1);
+		head.next = new ListNode(2);
+		head.next.next = new ListNode(3);
+		head = rl.reverseIterative(head);
+		rl.printList(head);
+	}
+
+	private void printList(ListNode head) {
+		while (head != null) {
+			System.out.println(head.val + "   ");
+			head = head.next;
+
+		}
+	}
+
 }
