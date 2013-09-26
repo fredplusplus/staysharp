@@ -13,9 +13,6 @@ public class FourSum {
 		while (i < num.length - 3) {
 			int j = i + 1;
 			while (j < num.length - 2) {
-				if (j > i + 1 && num[j] == num[j - 1]) {
-					continue;
-				}
 				int start = j + 1;
 				int end = num.length - 1;
 				while (start < end) {
