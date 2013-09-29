@@ -21,15 +21,4 @@ public class PutcharRecursion {
 			return put(val / 10) + val % 10;
 		}
 	}
-
-	public static void main(String[] args) {
-		PutcharRecursion pr = new PutcharRecursion();
-		System.out.println(pr.putString(0));
-		System.out.println(pr.putString(-123));
-		System.out.println(pr.putString(123));
-		System.out.println(pr.putString(12340));
-		System.out.println(pr.putString(120340));
-
-	}
-
 }

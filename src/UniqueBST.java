@@ -28,10 +28,4 @@ public class UniqueBST {
 		}
 		return result;
 	}
-
-	public static void main(String[] args) {
-		UniqueBST ub = new UniqueBST();
-		ub.generateTrees(2);
-		System.out.println(ub);
-	}
 }

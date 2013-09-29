@@ -42,10 +42,4 @@ public class StringReorderDistantApart {
 		}
 		return maxFreq;
 	}
-
-	public static void main(String[] args) {
-		StringReorderDistantApart srda = new StringReorderDistantApart();
-
-		System.out.println(srda.reorderString("aabbaa", 2));
-	}
 }

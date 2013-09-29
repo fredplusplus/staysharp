@@ -20,9 +20,4 @@ public class FirstMissingPositive {
 		}
 		return i + 1;
 	}
-
-	public static void main(String[] args) {
-		FirstMissingPositive fm = new FirstMissingPositive();
-		System.out.println(fm.firstMissingPositive(new int[] { 3, 4, -1, 1 }));
-	}
 }

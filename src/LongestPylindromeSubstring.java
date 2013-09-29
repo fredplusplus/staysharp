@@ -29,10 +29,4 @@ public class LongestPylindromeSubstring {
 		}
 		return s.substring(c1 + 1, c2);
 	}
-
-	public static void main(String[] args) {
-		LongestPylindromeSubstring sub = new LongestPylindromeSubstring();
-
-		System.out.println(sub.longestPalindrome("abb"));
-	}
 }

@@ -19,9 +19,4 @@ public class GrayCode {
 		}
 		return codes;
 	}
-
-	public static void main(String[] args) {
-		GrayCode gc = new GrayCode();
-		System.out.println(gc.grayCode(3));
-	}
 }

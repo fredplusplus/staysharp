@@ -40,10 +40,4 @@ public class SubstringWithConcatenationOfAllWords {
 		}
 		return set;
 	}
-
-	public static void main(String[] args) {
-		SubstringWithConcatenationOfAllWords ss = new SubstringWithConcatenationOfAllWords();
-		System.out.println(ss.findSubstring("foobarfoo", new String[] { "foo",
-				"bar" }));
-	}
 }

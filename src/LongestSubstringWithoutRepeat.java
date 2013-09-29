@@ -25,10 +25,4 @@ public class LongestSubstringWithoutRepeat {
 		}
 		return Math.max(maxlength, end - start);
 	}
-
-	public static void main(String[] args) {
-		LongestSubstringWithoutRepeat rep = new LongestSubstringWithoutRepeat();
-
-		System.out.println(rep.lengthOfLongestSubstring("abcdcefcg"));
-	}
 }

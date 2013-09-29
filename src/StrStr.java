@@ -21,9 +21,4 @@ public class StrStr {
 			return null;
 		}
 	}
-
-	public static void main(String[] args) {
-		StrStr ss = new StrStr();
-		System.out.println(ss.strStr("bblahhhh", "blah"));
-	}
 }

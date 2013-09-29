@@ -62,10 +62,4 @@ public class BinarySearchInRotatedArray {
 		}
 		return result;
 	}
-
-	public static void main(String[] s) {
-		BinarySearchInRotatedArray ba = new BinarySearchInRotatedArray();
-		System.out.println(ba.search(new int[] { 1, 1, 1, 1, 1, 2, 2, 1 }, 2));
-
-	}
 }

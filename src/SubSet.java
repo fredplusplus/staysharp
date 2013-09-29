@@ -54,10 +54,4 @@ public class SubSet {
 		subsets(partial, S, index + 1);
 		partial.addAll(newPartial);
 	}
-
-	public static void main(String[] args) {
-		SubSet ss = new SubSet();
-		ArrayList<ArrayList<Integer>> set = ss.subsets(new int[] { 1, 4, 0 });
-		System.out.println(set.size());
-	}
 }

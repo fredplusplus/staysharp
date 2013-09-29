@@ -14,10 +14,4 @@ public class PointInRectangle {
 			this.y = y;
 		}
 	}
-
-	public static void main(String[] args) {
-		PointInRectangle pir = new PointInRectangle();
-		System.out.println(pir.isInside(new Point(10, 10), new Point(20, 0), new Point(15, 5)));
-		System.out.println(pir.isInside(new Point(10, 10), new Point(20, 0), new Point(15, 15)));
-	}
 }

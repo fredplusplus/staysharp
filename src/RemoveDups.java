@@ -46,15 +46,4 @@ public class RemoveDups {
 		}
 		return meta.next;
 	}
-
-	public static void main(String[] args) {
-		RemoveDups rd = new RemoveDups();
-
-		ListNode head = new ListNode(1);
-		head.next = new ListNode(2);
-		head.next.next = new ListNode(2);
-		ListNode newHead = rd.deleteDuplicates(head);
-		System.out.println(newHead);
-	}
-
 }

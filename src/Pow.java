@@ -38,9 +38,4 @@ public class Pow {
 		}
 		return result;
 	}
-
-	public static void main(String[] args) {
-		Pow p = new Pow();
-		System.out.println(p.pow(1, -2147483648));
-	}
 }

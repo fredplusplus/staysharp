@@ -51,13 +51,4 @@ public class RestoreValidIP {
 			return false;
 		}
 	}
-
-	public static void main(String[] args) {
-		RestoreValidIP r = new RestoreValidIP();
-		ArrayList<String> result = r.restoreIpAddresses("25525511135");
-		for (String res : result) {
-			System.out.println(res);
-		}
-
-	}
 }

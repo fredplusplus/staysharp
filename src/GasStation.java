@@ -32,9 +32,4 @@ public class GasStation {
 			return -1;
 		}
 	}
-
-	public static void main(String[] args) {
-		GasStation gs = new GasStation();
-		System.out.println(gs.canCompleteCircuit(new int[] { 0, 2, 1, 1 }, new int[] { 1, 0, 2, 1 }));
-	}
 }

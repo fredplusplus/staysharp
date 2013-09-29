@@ -27,10 +27,4 @@ public class LongestValidParenthese {
 		}
 		return maxLength;
 	}
-
-	public static void main(String[] args) {
-		LongestValidParenthese lvp = new LongestValidParenthese();
-		int len = lvp.longestValidParentheses("(()())(()()()()");
-		System.out.println(len);
-	}
 }

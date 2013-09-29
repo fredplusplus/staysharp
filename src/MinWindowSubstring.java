@@ -45,9 +45,4 @@ public class MinWindowSubstring {
 			return "";
 		}
 	}
-
-	public static void main(String[] args) {
-		MinWindowSubstring mw = new MinWindowSubstring();
-		System.out.println(mw.minWindow("ab", "b"));
-	}
 }

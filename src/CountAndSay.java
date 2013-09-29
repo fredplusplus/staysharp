@@ -25,10 +25,4 @@ public class CountAndSay {
 		}
 		return new String(say);
 	}
-
-	public static void main(String[] args) {
-		CountAndSay cas = new CountAndSay();
-		String res = cas.countAndSay(4);
-		System.out.println(res);
-	}
 }

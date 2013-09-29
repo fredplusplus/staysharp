@@ -26,9 +26,4 @@ public class LargestRectangle {
 		}
 		return maxArea;
 	}
-
-	public static void main(String[] args) {
-		LargestRectangle lr = new LargestRectangle();
-		System.out.println(lr.largestRectangleArea(new int[] { 2, 1, 5, 6, 2, 3 }));
-	}
 }

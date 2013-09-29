@@ -52,10 +52,4 @@ public class MedianOfTwoSortedArray {
 			}
 		}
 	}
-
-	public static void main(String[] args) {
-		MedianOfTwoSortedArray m = new MedianOfTwoSortedArray();
-
-		System.out.println(m.findMedianSortedArrays(new int[] { 4 }, new int[] { 1, 2, 3, 5, 6, 7 }));
-	}
 }

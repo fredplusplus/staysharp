@@ -49,10 +49,4 @@ public class MaxDistance {
 		}
 		return maxLength;
 	}
-
-	public static void main(String[] args) {
-		MaxDistance md = new MaxDistance();
-		System.out.println(md.findMaxDistance(new int[] { 4, 3, 5, 2, 1, 3, 2 }));
-
-	}
 }

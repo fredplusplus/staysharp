@@ -36,13 +36,4 @@ public class SortedListToBST {
 		root.right = right;
 		return root;
 	}
-
-	public static void main(String[] args) {
-		SortedListToBST b = new SortedListToBST();
-		ListNode head = new ListNode(3);
-		head.next = new ListNode(5);
-		head.next.next = new ListNode(8);
-		System.out.println(b.sortedListToBST(head));
-
-	}
 }

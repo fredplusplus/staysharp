@@ -81,11 +81,4 @@ public class SpiralPrint {
 		// recursion
 		generate(matrix, top + 1, left + 1, bottom - 1, right - 1);
 	}
-
-	public static void main(String[] args) {
-		int[][] matrix = new int[][] { { 1, 2, 3, }, { 4, 5, 6 }, { 7, 8, 9 } };
-		SpiralPrint sp = new SpiralPrint();
-		int[][] mat = sp.generateMatrix(2);
-		System.out.println(mat);
-	}
 }

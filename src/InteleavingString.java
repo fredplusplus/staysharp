@@ -55,9 +55,4 @@ public class InteleavingString {
 		}
 		return result[len1-1][len2-1];
 	}
-	
-	public static void main(String[] args) {
-		InteleavingString is = new InteleavingString();
-		System.out.println(is.isInterleave("aa", "ab", "aaba"));
-	}
 }

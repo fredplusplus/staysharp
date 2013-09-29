@@ -46,9 +46,4 @@ public class PhoneNumberCombo {
 			}
 		}
 	}
-
-	public static void main(String[] args) {
-		PhoneNumberCombo pnc = new PhoneNumberCombo();
-		System.out.println(pnc.letterCombinations("23"));
-	}
 }

@@ -22,9 +22,4 @@ public class WordCount {
 		}
 		return count;
 	}
-
-	public static void main(String[] args) {
-		WordCount wc = new WordCount();
-		System.out.println(wc.count(" hello world x"));
-	}
 }

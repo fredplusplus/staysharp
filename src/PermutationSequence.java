@@ -36,11 +36,4 @@ public class PermutationSequence {
 		}
 		return fact;
 	}
-
-	public static void main(String[] args) {
-		PermutationSequence ps = new PermutationSequence();
-		String res = ps.getPermutation(3, 2);
-		System.out.println(res);
-	}
-
 }

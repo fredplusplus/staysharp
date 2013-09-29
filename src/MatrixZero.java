@@ -30,9 +30,4 @@ public class MatrixZero {
 			}
 		}
 	}
-
-	public static void main(String[] ar) {
-		MatrixZero z = new MatrixZero();
-		z.setZeroes(new int[][] { { 0 } });
-	}
 }

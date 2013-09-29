@@ -34,9 +34,4 @@ public class PermutationII {
 			}
 		}
 	}
-
-	public static void main(String[] args) {
-		PermutationII per = new PermutationII();
-		System.out.println(per.permuteUnique(new int[] { 1, 1, 2, 3 }));
-	}
 }

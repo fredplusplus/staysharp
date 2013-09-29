@@ -51,9 +51,4 @@ public class MultiplyString {
 		}
 		return result;
 	}
-
-	public static void main(String[] ags) {
-		MultiplyString ms = new MultiplyString();
-		System.out.println(ms.multiply("9809", "202"));
-	}
 }

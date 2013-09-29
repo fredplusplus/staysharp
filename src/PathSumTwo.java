@@ -5,10 +5,6 @@ import java.util.ArrayList;
  */
 public class PathSumTwo {
 
-	public static void main(String[] args) {
-
-	}
-
 	public ArrayList<ArrayList<Integer>> pathSum(TreeNode root, int sum) {
 		ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
 		if (root == null) {

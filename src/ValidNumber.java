@@ -69,8 +69,4 @@ public class ValidNumber {
 		}
 		return (area == 3 || area == 5 || area == 8 || area == 10 || area == 11 | area == 12);
 	}
-	
-	public static void main(String[] args) {
-		System.out.println((new ValidNumber()).isNumber("    0.1   "));
-	}
 }

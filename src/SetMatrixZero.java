@@ -39,10 +39,4 @@ public class SetMatrixZero {
 			matrix[i][col] = 0;
 		}
 	}
-
-	public static void main(String[] args) {
-		SetMatrixZero smz = new SetMatrixZero();
-
-		smz.setZeroes(new int[][] { { 1, 0 } });
-	}
 }

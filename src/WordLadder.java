@@ -41,11 +41,4 @@ public class WordLadder {
 		}
 		return 0;
 	}
-
-	public static void main(String[] args) {
-		WordLadder wl = new WordLadder();
-		HashSet<String> dict = new HashSet<String>();
-		dict.addAll(Arrays.asList("hot", "cog", "dot", "dog", "hit", "lot", "log"));
-		System.out.println(wl.ladderLength("hit", "cog", dict));
-	}
 }

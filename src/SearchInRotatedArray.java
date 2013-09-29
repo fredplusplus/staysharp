@@ -34,10 +34,4 @@ public class SearchInRotatedArray {
 			return found;
 		}
 	}
-
-	public static void main(String[] args) {
-		int[] A = new int[] { 1, 2, 3, 3, 4, 5, 6, 1 };
-		SearchInRotatedArray so = new SearchInRotatedArray();
-		System.out.println(so.search(A, 6));
-	}
 }

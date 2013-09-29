@@ -16,13 +16,4 @@ public class RemoveSpace {
 			return i;
 		}
 	}
-
-	public static void main(String[] args) {
-		RemoveSpace rs = new RemoveSpace();
-		char[] str = "   a c d e f    ".toCharArray();
-		int size = rs.removeSpace(str);
-		System.out.println(size);
-		System.out.println(str);
-
-	}
 }

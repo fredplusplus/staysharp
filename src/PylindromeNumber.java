@@ -24,9 +24,4 @@ public class PylindromeNumber {
 		}
 		return true;
 	}
-
-	public static void main(String[] args) {
-		PylindromeNumber pn = new PylindromeNumber();
-		System.out.println(pn.isPalindrome(2147447412));
-	}
 }

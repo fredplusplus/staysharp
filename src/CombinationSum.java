@@ -35,10 +35,4 @@ public class CombinationSum {
 		}
 		result.add(res);
 	}
-
-	public static void main(String[] args) {
-		CombinationSum cs = new CombinationSum();
-		ArrayList<ArrayList<Integer>> res = cs.combinationSum(new int[] { 2, 3 }, 6);
-		System.out.println(res);
-	}
 }

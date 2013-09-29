@@ -68,9 +68,4 @@ public class UniquePath {
 		}
 		return solution[0][0];
 	}
-
-	public static void main(String[] args) {
-		UniquePath up = new UniquePath();
-		System.out.println(up.uniquePathsWithObstacles(new int[][] { { 0 }, { 0 } }));
-	}
 }

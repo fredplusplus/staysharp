@@ -18,11 +18,4 @@ public class RotateArray {
 			array[end--] = temp;
 		}
 	}
-
-	public static void main(String[] args) {
-		RotateArray ra = new RotateArray();
-		System.out.println(Arrays.asList(ra.rotateArray(new Integer[] { 1, 2, 3, 4, 5, 6, 7 }, 3)));
-		System.out.println(Arrays.asList(ra.rotateArray(new Integer[] { 1, 2, 3, 4, 5, 6, 7 }, 7)));
-		System.out.println(Arrays.asList(ra.rotateArray(new Integer[] { 1, 2, 3, 4, 5, 6, 7 }, 0)));
-	}
 }
