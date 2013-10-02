@@ -37,12 +37,55 @@ public class ReverseList {
 			return newHead;
 		}
 	}
+
+	/**
+	 * http://oj.leetcode.com/problems/reverse-nodes-in-k-group/
+	 * 
+	 */
+	public ListNode reverseKGroup(ListNode head, int k) {
+		if (head == null || head.next == null) {
+			return head;
+		}
+		ListNode newhead = null;
+		ListNode tail = null;
+		int count = 0;
+		while (head != null && count < k) {
+			ListNode next = head.next;
+			head.next = newhead;
+			newhead = head;
+			if (count == 0) {
+				tail = newhead;
+			}
+			head = next;
+			count++;
+		}
+		if (count < k) {
+			while(newhead != null) {
+				ListNode next = newhead.next;
+				newhead.next = head;
+				head = newhead;
+				newhead = next;
+			}
+			return head;
+		} else {
+			tail.next = reverseKGroup(head, k);
+			return newhead;
+		}
+	}
+
 	private void printList(ListNode head) {
 		while (head != null) {
 			System.out.println(head.val + "   ");
 			head = head.next;
 
 		}
+	}
+
+	public static void main(String[] args) {
+		ReverseList rl = new ReverseList();
+		ListNode head = new ListNode(1);
+		head.next = new ListNode(2);
+		rl.printList(rl.reverseKGroup(head, 3));
 	}
 
 }
