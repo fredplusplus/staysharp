@@ -5,46 +5,49 @@ public class MergeKSortedList {
 	/**
 	 * http://leetcode.com/oldoj#question_23
 	 */
-	public ListNode mergeKLists(ArrayList<ListNode> lists) {
-		PriorityQueue<ComparableNode> heap = new PriorityQueue<ComparableNode>();
-		ListNode meta = new ListNode(0);
-		for (ListNode list : lists) {
-			if (list != null) {
-				heap.add(new ComparableNode(list.val, list.next));
-			}
-		}
-		ListNode tail = meta;
-		while (!heap.isEmpty()) {
-			ComparableNode node = heap.poll();
-			ListNode listNode = new ListNode(node.val);
-			tail.next = listNode;
-			tail = tail.next;
-			if (node.next != null) {
-				node = new ComparableNode(node.next.val, node.next.next);
-				heap.add(node);
-			}
-		}
-		return meta.next;
-	}
+	private class MyNode implements Comparable<MyNode> {
+		public ListNode node;
 
-	class ComparableNode extends ListNode implements Comparable<ListNode> {
-
-		public ListNode next;
-
-		ComparableNode(int x, ListNode next) {
-			super(x);
-			this.next = next;
+		public MyNode(ListNode node) {
+			this.node = node;
 		}
 
-		@Override
-		public int compareTo(ListNode o) {
-			if (this.val == o.val) {
-				return 0;
-			} else if (this.val > o.val) {
+		public int compareTo(MyNode other) {
+			if (node.val > other.node.val) {
 				return 1;
 			} else {
 				return -1;
 			}
 		}
+	}
+
+	public ListNode mergeKLists(ArrayList<ListNode> lists) {
+		PriorityQueue<MyNode> heap = new PriorityQueue<MyNode>();
+		for (ListNode node : lists) {
+			if (node != null) {
+				heap.add(new MyNode(node));
+			}
+		}
+		ListNode head = new ListNode(0);
+		ListNode tail = head;
+		while (!heap.isEmpty()) {
+			MyNode mynode = heap.poll();
+			ListNode node = mynode.node;
+			if (node.next != null) {
+				heap.add(new MyNode(node.next));
+				node.next = null;
+			}
+			tail.next = node;
+			tail = tail.next;
+		}
+		return head.next;
+	}
+	
+	public static void main(String[] args) {
+		ArrayList<ListNode> lists = new ArrayList<ListNode>();
+		lists.add(new ListNode(1));
+		lists.add(new ListNode(0));
+		MergeKSortedList me = new MergeKSortedList();
+		me.mergeKLists(lists);
 	}
 }
